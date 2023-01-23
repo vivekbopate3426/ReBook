@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/top_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#ReBook "
+        android:textColor="@color/purple_500"
+        android:textColorHighlight="@color/cardview_shadow_end_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+
+    <ImageView
+        android:id="@+id/login_image"
+        android:layout_width="315dp"
+        android:layout_height="328dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/login_page_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_textview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/login_hello_textview"
+        android:layout_width="237dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:text="Hello!"
+        android:textColor="@color/purple_700"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_image"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <TextView
+        android:id="@+id/login_desctextview"
+        android:layout_width="320dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center"
+        android:text="Best place to sell and buy books, digests, notes,etc."
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_hello_textview"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <TextView
+        android:id="@+id/logn_button"
+        android:layout_width="261dp"
+        android:layout_height="78dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/round_corner_button_solid"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_desctextview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Signup_button"
+        android:layout_width="277dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="69dp"
+        android:background="@drawable/round_corner_button_outline"
+        android:gravity="center"
+        android:text="SIGNUP"
+        android:textColor="@color/purple_500"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logn_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
