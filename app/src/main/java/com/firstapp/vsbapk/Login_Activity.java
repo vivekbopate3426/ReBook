@@ -3,6 +3,7 @@ package com.firstapp.vsbapk;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,22 +25,22 @@ public class Login_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
         final EditText email_edittext = findViewById(R.id.email);
-        final EditText passward_edittext = findViewById(R.id.password_toggle);
+        final EditText password_edittext = findViewById(R.id.password_toggle);
         final TextView login_button = findViewById(R.id.login_button_login);
         mAuth = FirebaseAuth.getInstance();
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 email_edittext.setError(null);
-                passward_edittext.setError(null);
+                password_edittext.setError(null);
                 String emailText = email_edittext.getText().toString();
-                String passwordText = passward_edittext.getText().toString();
+                String passwordText = password_edittext.getText().toString();
                 if (TextUtils.isEmpty(emailText)) {
                     email_edittext.setError("Please Enter Email");
                     return;
                 }
                 if (TextUtils.isEmpty(passwordText)) {
-                    passward_edittext.setError("Please Enter Password");
+                    password_edittext.setError("Please Enter Password");
                     return;
                 }
                 mAuth.signInWithEmailAndPassword(emailText, passwordText)
@@ -58,6 +59,14 @@ public class Login_Activity extends AppCompatActivity {
                             });
             }
                         });
+        final TextView gotoSignUp= findViewById(R.id.sign_up);
+        gotoSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login_Activity.this,Signup_Activity.class);
+                startActivity(intent);
+            }
+        });
             }
 
         }
