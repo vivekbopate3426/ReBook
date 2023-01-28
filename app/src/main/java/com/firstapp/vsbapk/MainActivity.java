@@ -7,29 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
-        final TextView loginButton=findViewById(R.id.login_button);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Login_Activity.class);
-                startActivity(intent);
-            }
-        });
-        final TextView Signup_Button=findViewById(R.id.Signup_button);
-        Signup_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Signup_Activity.class);
-                startActivity(intent);
-            }
-        });
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        final TextView name = findViewById(R.id.Welcome_name);
+        name.setText("Welcome Back-" + user.getDisplayName());
+        if (user != null) {
+        } else {
+            Intent intent = new Intent(MainActivity.this, Login_Activity.class);
+            startActivity(intent);
 
+        }
     }
+
 }
