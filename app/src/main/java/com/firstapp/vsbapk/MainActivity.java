@@ -1,6 +1,10 @@
 package com.firstapp.vsbapk;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +12,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -32,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
             startActivity(intent);
 
+
+           // NavController navController= Navigation.findNavController(this,R.id.fragmentContainerView);findViewById(R.id.fragmentContainerView);
         }
 
     }

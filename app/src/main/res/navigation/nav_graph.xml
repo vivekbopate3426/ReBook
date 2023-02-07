@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_Fragment">
+
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.firstapp.vsbapk.fragment.Home_Fragment"
+        android:label="fragment_home_"
+        tools:layout="@layout/fragment_home_" >
+        <action
+            android:id="@+id/action_home_Fragment_to_shopping_Cart_Fragment5"
+            app:destination="@id/shopping_Cart_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopping_Cart_Fragment"
+        android:name="com.firstapp.vsbapk.Shopping_Cart_Fragment"
+        android:label="fragment_shopping__cart_"
+        tools:layout="@layout/fragment_shopping__cart_" >
+        <action
+            android:id="@+id/action_shopping_Cart_Fragment_to_profile_Fragment2"
+            app:destination="@id/profile_Fragment" />
+        <action
+            android:id="@+id/action_shopping_Cart_Fragment_to_home_Fragment4"
+            app:destination="@id/home_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_Fragment"
+        android:name="com.firstapp.vsbapk.Profile_Fragment"
+        android:label="fragment_profile_"
+        tools:layout="@layout/fragment_profile_" >
+        <action
+            android:id="@+id/action_profile_Fragment_to_home_Fragment4"
+            app:destination="@id/home_Fragment" />
+        <action
+            android:id="@+id/action_profile_Fragment_to_shopping_Cart_Fragment4"
+            app:destination="@id/shopping_Cart_Fragment" />
+    </fragment>
+</navigation>

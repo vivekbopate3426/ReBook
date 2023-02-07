@@ -77,11 +77,11 @@ private FirebaseAuth mAuth;
                                                             }
                                                         }
                                                     });
-                                    //Toast.makeText(getApplicationContext(),
-                                           // "SignUp Successful", Toast.LENGTH_SHORT).show();
-                               // }else {
-                                  //  Toast.makeText(getApplicationContext(),
-                                         //   "SignUp UnSuccessful", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),
+                                           "SignUp Successful", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(getApplicationContext(),
+                                           "SignUp UnSuccessful", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
