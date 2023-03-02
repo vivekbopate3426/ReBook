@@ -34,10 +34,21 @@
         android:src="@drawable/profile_img_nav"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.108" />
+
+    <ProgressBar
+        android:id="@+id/profile_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/profile_name"
@@ -45,9 +56,10 @@
         android:layout_height="65dp"
         android:background="@drawable/round_corner_button_outline"
         android:text="Name"
+        android:gravity="center"
         android:textColor="@color/teal_700"
         android:textSize="35dp"
-        android:textStyle="italic"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.402"
@@ -57,38 +69,41 @@
 
     <TextView
         android:id="@+id/profile_email"
-        android:layout_width="158dp"
-        android:layout_height="73dp"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:gravity="center"
         android:text="Email"
         android:textColor="@color/teal_700"
-        android:textSize="40dp"
+        android:textSize="20dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382" />
+        app:layout_constraintVertical_bias="0.376" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Create_profile_layout"
         android:layout_width="409dp"
         android:layout_height="407dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84">
+        app:layout_constraintVertical_bias="0.84"
+        tools:visibility="gone">
 
 
         <TextView
-            android:id="@+id/Create_profile"
-            android:layout_width="253dp"
-            android:layout_height="58dp"
+            android:id="@+id/Create_profile_Textview"
+            android:layout_width="267dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_corner_button_solid"
             android:text="Create Profile"
             android:textColor="@color/white"
             android:textSize="36dp"
             android:textStyle="bold"
-            android:background="@drawable/round_corner_button_solid"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.43"
@@ -98,7 +113,7 @@
 
 
         <EditText
-            android:id="@+id/profile_edit_mobile_no."
+            android:id="@+id/profile_edit_mobile_no"
             android:layout_width="214dp"
             android:layout_height="62dp"
             android:hint="Mobile No.:-"
@@ -131,7 +146,7 @@
 
 
         <EditText
-            android:id="@+id/profile_edit_Second_Mobile_no."
+            android:id="@+id/profile_edit_Second_Mobile_no"
             android:layout_width="228dp"
             android:layout_height="78dp"
             android:hint="Second Mobile No.:-"
@@ -148,9 +163,10 @@
 
         <TextView
             android:id="@+id/profile_edit_Save"
-            android:layout_width="114dp"
-            android:layout_height="72dp"
+            android:layout_width="199dp"
+            android:layout_height="64dp"
             android:background="@drawable/round_corner_button_solid"
+            android:gravity="center"
             android:text="Save"
             android:textColor="@color/white"
             android:textSize="35dp"
@@ -161,6 +177,155 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.952" />
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="409dp"
+        android:layout_height="517dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/profile_profile_Textview"
+            android:layout_width="158dp"
+            android:layout_height="62dp"
+            android:background="@drawable/round_corner_button_outline"
+            android:text="Profile"
+            android:textColor="@color/teal_700"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.068"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/profile_address"
+            android:layout_width="127dp"
+            android:layout_height="53dp"
+            android:gravity="center"
+            android:text="Address:-"
+            android:textColor="@color/teal_700"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.297" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="194dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toEndOf="@+id/profile_address"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.301" />
+
+        <TextView
+            android:id="@+id/profile_mobile_no"
+            android:layout_width="206dp"
+            android:layout_height="66dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="Primary Mobile No.:-"
+            android:textColor="@color/teal_700"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.419"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/primary_mobile"
+            android:layout_width="170dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="17dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/profile_mobile_no"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.397" />
+
+        <TextView
+            android:id="@+id/profile_Second_Mobile_no"
+            android:layout_width="208dp"
+            android:layout_height="71dp"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="Second Mobile No.:-"
+            android:textColor="@color/teal_700"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.576" />
+
+        <TextView
+            android:id="@+id/second_mobile"
+            android:layout_width="174dp"
+            android:layout_height="70dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/profile_Second_Mobile_no"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.577" />
+
+        <TextView
+            android:id="@+id/profile_edit"
+            android:layout_width="199dp"
+            android:layout_height="64dp"
+            android:background="@drawable/round_corner_button_solid"
+            android:gravity="center"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.827" />
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
