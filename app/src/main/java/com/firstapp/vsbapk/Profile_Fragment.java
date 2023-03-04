@@ -180,7 +180,6 @@ public class Profile_Fragment extends Fragment {
                           profie.setSeconMono(secondMONOText);
                           ref.child("Profiles").child(user.getUid()).setValue(profie)
 
-
                                   .addOnSuccessListener(new OnSuccessListener<Void>() {
                                       @Override
                                       public void onSuccess(Void unused) {

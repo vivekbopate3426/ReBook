@@ -54,7 +54,7 @@
 
 
     <TextView
-        android:id="@+id/text_book"
+        android:id="@+id/home_sell"
         android:layout_width="126dp"
         android:layout_height="135dp"
         android:layout_marginStart="40dp"

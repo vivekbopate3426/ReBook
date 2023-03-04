@@ -13,6 +13,9 @@
         android:theme="@style/Theme.VSBApk"
         tools:targetApi="31">
         <activity
+            android:name=".SellActivity"
+            android:exported="false" />
+        <activity
             android:name=".Home_Activity"
             android:exported="false" />
         <activity

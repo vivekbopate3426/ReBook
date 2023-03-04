@@ -309,7 +309,7 @@
             android:id="@+id/profile_edit"
             android:layout_width="199dp"
             android:layout_height="64dp"
-            android:background="@drawable/round_corner_button_solid"
+            android:background="@drawable/edit_round_corner_button_solid"
             android:gravity="center"
             android:text="Edit"
             android:textColor="@color/white"
