@@ -33,7 +33,7 @@
 
 
         <TextView
-            android:id="@+id/produt_name"
+            android:id="@+id/product_name"
             android:layout_width="82dp"
             android:layout_height="40dp"
             android:gravity="center"
@@ -49,7 +49,7 @@
             app:layout_constraintVertical_bias="0.563" />
 
         <TextView
-            android:id="@+id/produt_description"
+            android:id="@+id/product_description"
             android:layout_width="189dp"
             android:layout_height="51dp"
             android:gravity="left"
@@ -65,7 +65,7 @@
             app:layout_constraintVertical_bias="0.68" />
 
         <RatingBar
-            android:id="@+id/produt_rating"
+            android:id="@+id/product_rating"
             android:layout_width="243dp"
             android:layout_height="47dp"
             android:rating="4.7"
@@ -78,7 +78,7 @@
             app:layout_constraintVertical_bias="0.808" />
 
         <TextView
-            android:id="@+id/produt__rating"
+            android:id="@+id/product__rating"
             android:layout_width="61dp"
             android:layout_height="39dp"
             android:gravity="center"

@@ -11,6 +11,7 @@ public class SellActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_sell);
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.sell_placeholder,new sell_fragment())
