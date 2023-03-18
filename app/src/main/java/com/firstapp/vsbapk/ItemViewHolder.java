@@ -1,5 +1,7 @@
 package com.firstapp.vsbapk;
 
+import android.text.Layout;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -20,6 +22,9 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
     public void bind(Book item) {
         titleTextView.setText(item.getName());
         bodyTextView.setText(item.getMrp());
+
+
+
 
     }
 }

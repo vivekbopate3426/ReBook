@@ -32,7 +32,7 @@ import com.google.firebase.database.ValueEventListener;
  */
 public class Profile_Fragment extends Fragment {
 
-    private Profile profie;
+    private Profile profile;
     private DatabaseReference ref;
     private FirebaseUser user;
     private FirebaseAuth auth;
@@ -104,7 +104,7 @@ public class Profile_Fragment extends Fragment {
 
             profilelayout = view.findViewById(R.id.profile_layout);
             createprofileLayout = view.findViewById(R.id.Create_profile_layout);
-            profie = new Profile();
+            profile = new Profile();
 
         }
         ref.child("Profiles").child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -174,11 +174,11 @@ public class Profile_Fragment extends Fragment {
 
                           } else {
                           }
-                          profie = new Profile();
-                          profie.setMono(MoNoText);
-                          profie.setAddress(addressText);
-                          profie.setSeconMono(secondMONOText);
-                          ref.child("Profiles").child(user.getUid()).setValue(profie)
+                          profile = new Profile();
+                          profile.setMono(MoNoText);
+                          profile.setAddress(addressText);
+                          profile.setSeconMono(secondMONOText);
+                          ref.child("Profiles").child(user.getUid()).setValue(profile)
 
                                   .addOnSuccessListener(new OnSuccessListener<Void>() {
                                       @Override

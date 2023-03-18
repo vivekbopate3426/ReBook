@@ -4,14 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.paging.PagingConfig;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.firebase.ui.database.paging.DatabasePagingOptions;
+import com.firstapp.vsbapk.ItemAdapter;
 import com.firstapp.vsbapk.R;
 import com.firstapp.vsbapk.SellActivity;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 
 /**
@@ -55,32 +63,59 @@ public class Home_Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
+
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
        View view = inflater.inflate(R.layout.fragment_home_, container, false);
+
+        final RecyclerView recyclerView = view.findViewById(R.id.recycleView_home);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        Query query = FirebaseDatabase.getInstance().getReference().child("Products").child("Books");
+        PagingConfig config = new PagingConfig(10,5,false);
+        DatabasePagingOptions<Book>options= new DatabasePagingOptions.Builder<Book>()
+                .setLifecycleOwner(this)
+                .setQuery(query,config,Book.class)
+                .build();
+
+        ItemAdapter adapter = new ItemAdapter(options, new ItemAdapter.ClickListener() {
+            @Override
+            public void onItemClick(int position, Book book) {
+                Intent intent = new Intent(getActivity(), SellActivity.class);
+                intent.putExtra("Book",book);
+                intent.putExtra("CALLER","ProductDetails");
+                startActivity(intent);
+            }
+        });
+        recyclerView.setAdapter(adapter);
+
+
+
+
 
         // Inflate the layout for this fragment
         final TextView sellbutton = view.findViewById(R.id.home_sell);
         sellbutton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), SellActivity.class);
-                startActivity(intent);
+                intent.putExtra("CALLER","sell");
+                getActivity().startActivity(intent);
+
             }
         });
-
         return view;
 
 
     }
-
-
-
 }
