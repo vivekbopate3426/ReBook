@@ -69,7 +69,7 @@ public class ProductDetails extends Fragment {
 
         final TextView sellMrp = view.findViewById(R.id.pd_MRP);
 
-        final TextView sellDiscout = view.findViewById(R.id.pd_discount);
+        final TextView sellDiscount = view.findViewById(R.id.pd_discount);
 
         sellPrice.setText("₹"+book.getPrice());
         sellMrp.setText("₹"+book.getMrp());
@@ -89,12 +89,8 @@ public class ProductDetails extends Fragment {
 
         int difference = mrpInt-sellInt;
         int discountInt = (difference*100)/mrpInt;
-        sellDiscout.setText(discountInt+"%");
+        sellDiscount.setText(discountInt+"%");
         sellMrp.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
-
-
-
-
 
         return view;
     }

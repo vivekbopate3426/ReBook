@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/page_background3"
     android:layout_height="match_parent"
     tools:context=".fragment.sell_fragment">
 
@@ -14,15 +15,14 @@
     <TextView
         android:id="@+id/sellyourbook_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SELL YOUR BOOK"
-        android:textSize="30sp"
+        android:layout_height="232dp"
+        android:background="@drawable/sell_your_books"
         android:gravity="center"
         android:paddingTop="24dp"
         android:paddingBottom="24dp"
-        android:textColor="@color/teal_700"
-        android:textStyle="bold"
-        />
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,14 +37,13 @@
             android:text="Name of Book :"
             android:gravity="center"
             android:textStyle="bold"
-
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sell_name"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,14 +58,13 @@
             android:text="Standard :"
             android:gravity="center"
             android:textStyle="bold"
-
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sell_standard"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/black"/>
 
 
     </LinearLayout>
@@ -84,7 +82,7 @@
             android:text="Medium :"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <EditText
             android:layout_width="match_parent"
@@ -106,13 +104,13 @@
             android:text="MRP :"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sell_mrp"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -128,13 +126,13 @@
             android:text="Selling Price :"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sell_price"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -150,13 +148,13 @@
             android:text="Condition:- "
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sell_condition"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/black"/>
 
 
 
@@ -177,7 +175,7 @@
             android:textStyle="bold"
             android:paddingStart="16dp"
             android:paddingEnd="8dp"
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <CheckBox
             android:layout_width="match_parent"
@@ -187,7 +185,7 @@
             android:paddingEnd="8dp"
             android:textStyle="bold"
             android:id="@+id/sell_return"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 
@@ -204,34 +202,32 @@
             android:text="Delivery time :"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/white" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sell_delivery"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 
 
     <TextView
         android:id="@+id/sell_upload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="262dp"
+        android:layout_height="78dp"
         android:layout_gravity="center"
-        android:background="@drawable/sell_upload"
-        android:gravity="center"
-        android:text="Upload"
         android:layout_marginTop="24dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:background="@drawable/upload_main2"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <ProgressBar
         android:id="@+id/sell_progressbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 
 </LinearLayout>
 
