@@ -5,6 +5,16 @@ import java.io.Serializable;
 public class Book implements Serializable {
     private String name ;
 
+    public String getSeller() {
+        return seller;
+    }
+
+    public void setSeller(String seller) {
+        this.seller = seller;
+    }
+
+    private String seller = "XYZ";
+
     private String standard ;
 
     private String meduim ;

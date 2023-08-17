@@ -2,13 +2,57 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/page_background3"
     android:layout_height="match_parent"
     tools:context=".Shopping_Cart_Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_recycleview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Shopping Cart" />
+        android:layout_height="606dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="90dp"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="101dp"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="Total:-"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/cart_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text=".............."
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/cart_checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corner_button_solid"
+            android:gravity="bottom"
+            android:text="CheckOut"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

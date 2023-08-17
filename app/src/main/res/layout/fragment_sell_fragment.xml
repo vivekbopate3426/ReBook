@@ -37,7 +37,7 @@
             android:text="Name of Book :"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
             android:text="Standard :"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
@@ -82,13 +82,13 @@
             android:text="Medium :"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sell_medium"
-            android:textColor="@color/teal_700"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -104,7 +104,7 @@
             android:text="MRP :"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
@@ -126,7 +126,7 @@
             android:text="Selling Price :"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
@@ -148,7 +148,7 @@
             android:text="Condition:- "
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
@@ -175,7 +175,7 @@
             android:textStyle="bold"
             android:paddingStart="16dp"
             android:paddingEnd="8dp"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <CheckBox
             android:layout_width="match_parent"
@@ -185,7 +185,7 @@
             android:paddingEnd="8dp"
             android:textStyle="bold"
             android:id="@+id/sell_return"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
     </LinearLayout>
 
 
@@ -202,7 +202,7 @@
             android:text="Delivery time :"
             android:textStyle="bold"
             android:gravity="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"

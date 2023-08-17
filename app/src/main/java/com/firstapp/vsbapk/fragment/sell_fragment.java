@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -100,6 +101,7 @@ public class sell_fragment extends Fragment {
         Book book = new Book();
         final DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
         uploadbutton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 progressbar.setVisibility(View.VISIBLE);
@@ -111,6 +113,8 @@ public class sell_fragment extends Fragment {
                 String price = pricefield.getText().toString();
                 String condition = conditionfield.getText().toString();
                 String delivery = deliveryfield.getText().toString();
+
+
 
                 if (ValidateInput(name)) {
                     Toast.makeText(getActivity(), "Enter name", Toast.LENGTH_SHORT).show();
@@ -149,21 +153,27 @@ public class sell_fragment extends Fragment {
 
                 book.setName(name);
                 book.setStandard(std);
-
-
                 book.setMeduim(medium);
                 book.setMrp(mrp);
                 book.setPrice(price);
                 book.setCondition(condition);
-                book.setCod(Codfield.isSelected());
-                book.setReturnAvaiable(returnfield.isSelected());
+               // book.setCod(Codfield.isSelected());
+                //book.setReturnAvaiable(returnfield.isSelected());
                 book.setDelivery(delivery);
+
+               Codfield.setOnCheckedChangeListener((compoundButton, b) -> book.setCod(b));
+
+               returnfield.setOnCheckedChangeListener((compoundButton, b) -> book.setReturnAvaiable(b));
+
+
 
                 ref.child("Products").child("Books").push()
                         .setValue(book, new DatabaseReference.CompletionListener() {
+
                             @Override
                             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                                 progressbar.setVisibility(View.GONE);
+
 
                                 if(error==null){
                     Toast.makeText(getActivity(), "Book Upload Successful", Toast.LENGTH_SHORT).show();
